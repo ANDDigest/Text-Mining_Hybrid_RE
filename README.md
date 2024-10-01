@@ -47,7 +47,7 @@ cd ./Text-Mining_Hybrid_RE
 pip install -r requirements.txt
 ```
 
-## Usage
+## Training
 
 1. Train the Graph Neural Network (GraphSAGE approach):
 
