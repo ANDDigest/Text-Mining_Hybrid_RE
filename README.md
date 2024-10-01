@@ -50,7 +50,7 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
 
 3. Fine-tune the Large Language Model:
 ```python
-python finetune_llm.py
+mlx_lm.lora --model '/Volumes/T7 Shield/ITV/Models/Transformers/LLM/Gemma-2/Gemma-2-9b-it/' --train --data '/Users/itv/Projects/text-mining/ANDSystem/Data/LearningSets/PPI/GPT-4o/split/' --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-batches 1 --adapter-path '/Volumes/T7 Shield/ITV/Models/Transformers/LLM/Gemma-2/LoRA/Gemma-2-9b-it_PPI_FT/' --save-every 5000  --batch-size 1
 ```
 
 4. Run the full pipeline:
