@@ -27,7 +27,7 @@ Key components:
 
 ```bash
 git clone https://github.com/ANDDigest/Text-Mining_Hybrid_RE.git
-cd BreadcrumbsText-Mining_Hybrid_RE
+cd ./Text-Mining_Hybrid_RE
 pip install -r requirements.txt
 ```
 
