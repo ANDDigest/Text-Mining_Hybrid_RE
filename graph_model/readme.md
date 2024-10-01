@@ -7,7 +7,7 @@ The `nodes.csv` file contains information about the nodes in the graph. Each row
 
 - **First column**: An integer autoincrement ID used by the training script, starting from 0.
 - **Next columns**: These columns contain mostly zeros, with exactly one column containing a `1` value. The position of the `1` indicates the type of the node.
-- **Last column**: This is the object's unique ID from the ANDDigest/ANDSystem database.
+- **Last column**: This is the object's unique ID in the ANDDigest/ANDSystem databases.
 
 ### 2. `edges.csv`
 The `edges.csv` file contains the information about the edges (connections) between nodes. Each row follows this structure:
