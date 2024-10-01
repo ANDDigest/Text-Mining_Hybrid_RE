@@ -21,6 +21,7 @@ Key components:
 - MLX-LM 0.16.1+
 - Hugging Face Transformers
 - Scikit-learn 1.5.0+
+- Pandas
 
 ### Installation
 
