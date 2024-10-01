@@ -13,7 +13,7 @@ import argparse
 parser = argparse.ArgumentParser(description='GraphSAGE Model Training')
 parser.add_argument('--edges', type=str, default='./graph_model/edges.csv', help='Path to the edges CSV file')
 parser.add_argument('--nodes', type=str, default='./graph_model/nodes.csv', help='Path to the nodes CSV file')
-parser.add_argument('--output', type=str, default='./graph_model/node_embeddings.64_32.csv', help='Output path for node embeddings')
+parser.add_argument('--output', type=str, default='./graph_model/node_embeddings.128_64.csv', help='Output path for node embeddings')
 
 args = parser.parse_args()
 
