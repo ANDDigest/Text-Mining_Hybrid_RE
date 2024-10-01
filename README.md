@@ -45,7 +45,7 @@ python st1.train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> 
 
 2. Train the Binary Classifier:
 ```python
-python st2.train_classifier.py
+python st2.train_MLP_classifier.py
 ```
 
 3. Fine-tune the Large Language Model:
