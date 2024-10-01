@@ -1,4 +1,4 @@
-This folder contains only the examples, demonstrating the format, used to train a Graph Neural Network (GNN) using the GraphSAGE approach to obtain vector representations (embeddings) of graph nodes. The graph is represented by two separate CSV tables: `nodes.csv` and `edges.csv`.
+This folder contains the examples, only for demonstration purposes, of the format, used to train a Graph Neural Network (GNN) using the GraphSAGE approach to obtain vector representations (embeddings) of graph nodes. The graph is represented by two separate CSV tables: `nodes.csv` and `edges.csv`.
 
 ## Input Data
 
