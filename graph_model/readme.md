@@ -1,4 +1,4 @@
-This folder contains the examples, only for demonstration purposes, of the format, used to train a Graph Neural Network (GNN) using the GraphSAGE approach to obtain vector representations (embeddings) of graph nodes. The graph is represented by two separate CSV tables: `nodes.csv` and `edges.csv`.
+This folder contains examples for demonstration purposes only, illustrating the format we used to train our Graph Neural Network (GNN) using the GraphSAGE approach and obtain vector representations (embeddings) of graph nodes. Due to the very small size of this sample graph, the training script may not be able to compute metrics during the training process, which could result in warnings. The graph is represented by two separate CSV files: **`edges.csv`** and **`nodes.csv`**.
 
 ## Input Data
 
@@ -20,4 +20,4 @@ The `edges.csv` file contains the information about the edges (connections) betw
 
 ## Output Data
 
-The output of the training process is a CSV file containing the 64-dimensional vector (embedding) for each node in the graph. This vector represents the node's learned features, used for further training of the MLP classifier for the graph-based protein interaction prediction task.
+The output of the training process is a CSV file, the first column of which contains the inner ID for each node from the **nodes.csv** and its 64-dimensional vector representation (embedding) in the graph. This vector represents the node's learned features, used for further training of the MLP classifier for the graph-based protein interaction prediction task.
