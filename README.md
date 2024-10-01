@@ -9,7 +9,7 @@ Our method combines text-mining techniques with GNNs and fine-tuned LLMs to exte
 Key components:
 - Graph Neural Network for learning node embeddings
 - Binary classifier based on a Multilayer Perceptron 
-- Fine-tuned Large Language Model for validating predictions
+- Fine-tuned Large Language Model for validating predictions in the literature
 
 ## Getting Started
 
