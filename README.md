@@ -33,10 +33,15 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Train the Graph Neural Network:
-```python
-python train_gnn.py
+1. Train the Graph Neural Network (GraphSAGE approach) to obtain vector representations of graph nodes. Example input and output files, along with descriptions, can be found in the `graph_model` directory. The full graph used in the study is available upon request due to its large size:
+
+```bash
+python train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> --output <path_to_output_embeddings_csv>
 ```
+
+- `--edges`: Path to the edges CSV file (default: `./graph_model/st1.edges.csv`)
+- `--nodes`: Path to the nodes CSV file (default: `./graph_model/st1.nodes.csv`)
+- `--output`: Path to save the generated node embeddings (default: `./graph_model/st2.node_embeddings.64_32.csv`)
 
 2. Train the Binary Classifier:
 ```python
