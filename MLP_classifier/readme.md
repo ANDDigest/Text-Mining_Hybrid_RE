@@ -10,4 +10,4 @@ The archive contains dataset, split into the training, validation and testing fi
 - **Last two columns**: Two last columns are the level of confidence (1 - pairwise co-occurence <i>p</i>-value) and the label indicating if it is a positive (1), or negative (0) example.
 
 ### 2. `PPI_mlp_model.pth`
-The `PPI_mlp_model.pth` are the weights in the PyTorch serialized tensors format, of our MultiLayer Perceptron (MLP) model, trained for predicting edges between the protein pairs based on the Graph structure. These weights were utilized in our study.
+`PPI_mlp_model.pth` - the weights in the PyTorch serialized tensors format of our MultiLayer Perceptron (MLP) model, trained for predicting edges between the protein pairs based on the Graph structure. These weights were utilized in our study.
