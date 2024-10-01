@@ -86,7 +86,7 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
    Parameters:
    - `--model`: Path to the base pre-trained LLM (same as in step 3.1)
    - `--adapter-file`: Path to the LoRA adapter obtained from step 3.1
-   - `--save-path`: Path to save the fused model (The LLM used in our study is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
+   - `--save-path`: Path to save the fused model (The Fused LLM, used in our study, is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
 
 ## Usage
 
