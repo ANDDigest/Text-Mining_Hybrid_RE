@@ -2,7 +2,7 @@ This folder contains the archive with a dataset of protein embeddings, obtained 
 
 ## Content
 
-### 1. `dataset_MLP.zip`
+### 1. `dataset_MLP.zip` [deleted due to size restrictions]
 The archive contains dataset, split into the training, validation and testing files. Each of the files is presented by the comma-separated table in the *.csv format with a following structure:
 
 - **First column**: a pair of unique protein IDs from the ANDDigest/ANDSystem databases, corresponding to the `nodes.csv` of the graph, separated with the `_` sign;
