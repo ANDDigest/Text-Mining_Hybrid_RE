@@ -1,3 +1,5 @@
+I apologize for that oversight. You're absolutely right - the parameter descriptions are important for users to understand how to use the scripts. Let me revise the README to include those critical details while maintaining the improved structure:
+
 # Hybrid Approach for Protein Interaction Extraction from Scientific Literature
 
 This repository contains the code and models for a hybrid approach to knowledge extraction from scientific publications, combining structured ontology models, pairwise co-occurrence, graph neural networks (GNNs), and large language models (LLMs).
@@ -53,6 +55,11 @@ pip install -r requirements.txt
 python st1.train_gnn.py --edges <path_to_input_edges_csv> --nodes <path_to_input_nodes_csv> --output <path_to_output_embeddings_csv>
 ```
 
+Parameters:
+- `--edges`: Path to the edges CSV file (default: `./graph_model/edges.csv`)
+- `--nodes`: Path to the nodes CSV file (default: `./graph_model/nodes.csv`)
+- `--output`: Path to save the generated node embeddings (default: `./graph_model/node_embeddings.128_64.csv`)
+
 2. Train the Binary Classifier:
 
 ```bash
@@ -67,11 +74,20 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
    mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
    ```
 
+   Parameters:
+   - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study, [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used)
+   - `--data`: Path to the dataset used in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
+
    3.2. Fuse the adapter with the base model:
    
    ```bash
    mlx_lm.fuse --model <base_model_path> --adapter-file <path_to_adapter> --save-path <fused_model_path> --de-quantize
    ```
+
+   Parameters:
+   - `--model`: Path to the base pre-trained LLM (same as in step 3.1)
+   - `--adapter-file`: Path to the LoRA adapter obtained from step 3.1
+   - `--save-path`: Path to save the fused model (The LLM used in our study is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
 
 ## Data
 
