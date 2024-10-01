@@ -1,5 +1,3 @@
-I apologize for that oversight. You're absolutely right - the parameter descriptions are important for users to understand how to use the scripts. Let me revise the README to include those critical details while maintaining the improved structure:
-
 # Hybrid Approach for Protein Interaction Extraction from Scientific Literature
 
 This repository contains the code and models for a hybrid approach to knowledge extraction from scientific publications, combining structured ontology models, pairwise co-occurrence, graph neural networks (GNNs), and large language models (LLMs).
