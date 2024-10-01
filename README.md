@@ -53,17 +53,17 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
     - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study the [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used);
     - `--data`: Path to the dataset used in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset).
 <br>
-    ```bash
-    mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-        batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
-    ```
+```bash
+mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-        batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
+```
 
-    3.2. The obtained adapter was fused with the base model, using the following shell command:
-    ```bash
-    mlx_lm.fuse --model <base_model_path> --adapter-file <path_to_adapter> --save-path <fused_model_path> --de-quantize
-    ```
-    - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study the [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used);
-    - `--adapter-file`: Path to the LoRA adapter, obtained by performing command from 3.1.;
-    - `--save-path`: Path to where the fused model is saved. The LLM, used in our study, for the context-based protein interaction prediction is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI).
+3.2. The obtained adapter was fused with the base model, using the following shell command:
+```bash
+mlx_lm.fuse --model <base_model_path> --adapter-file <path_to_adapter> --save-path <fused_model_path> --de-quantize
+```
+- `--model`: Path to the base pre-trained LLM for fine-tuning (in our study the [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used);
+- `--adapter-file`: Path to the LoRA adapter, obtained by performing command from 3.1.;
+- `--save-path`: Path to where the fused model is saved. The LLM, used in our study, for the context-based protein interaction prediction is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI).
 
 ## Data
 
