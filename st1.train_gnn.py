@@ -79,7 +79,7 @@ class GraphSAGE(torch.nn.Module):
         return (z[edge_index[0]] * z[edge_index[1]]).sum(dim=-1)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model = GraphSAGE(data.num_features, 64, 32).to(device)
+model = GraphSAGE(data.num_features, 128, 64).to(device)
 
 # Move data to the device
 train_data = train_data.to(device)
