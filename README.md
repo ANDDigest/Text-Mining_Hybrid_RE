@@ -1,4 +1,4 @@
-# Hybrid Approach, combining Structured Ontology Model, Co-occurrence, Graph Neural Network, and Large Language Model, to Extraction of Protein Interaction from Scientific Literature
+# Hybrid Approach, combining Structured Ontology Models, Pairwise Co-occurrence, Graph Neural Networks, and Large Language Models, to Extraction of Protein Interactions from Scientific Literature
 
 This repository contains the code and models for a hybrid approach to knowledge extraction from scientific publications using structured ontology models, graph neural networks (GNNs), and large language models (LLMs).
 
