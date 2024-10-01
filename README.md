@@ -95,7 +95,7 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
 - MLP classifier weights: Available in `./MLP_classifier/` folder
 - ANDDigest database: https://anddigest.sysbio.ru/
 - Base LLM: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
-- Fine-tuned LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
+- Fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
 - Fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
 
 ## Results
