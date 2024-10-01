@@ -36,7 +36,7 @@ pip install -r requirements.txt
 1. Train the Graph Neural Network (GraphSAGE approach) to obtain vector representations of graph nodes:
 
 ```bash
-python st1.train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> --output <path_to_output_embeddings_csv>
+python st1.train_gnn.py --edges <path_to_input_edges_csv> --nodes <path_to_input_nodes_csv> --output <path_to_output_embeddings_csv>
 ```
 
 - `--edges`: Path to the edges CSV file (default: `./graph_model/edges.csv`)
@@ -44,8 +44,8 @@ python st1.train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> 
 - `--output`: Path to save the generated node embeddings (default: `./graph_model/node_embeddings.128_64.csv`)
 
 2. Train the Binary Classifier:
-```python
-python st2.train_MLP_classifier.py
+```bash
+python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <path_to_input_test_csv> --validation <path_to_input_validation_csv> --output <path_to_output_model_weights>
 ```
 
 3. Fine-tune the Large Language Model:
