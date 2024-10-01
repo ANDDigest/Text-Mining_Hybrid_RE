@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Train the Graph Neural Network (GraphSAGE approach) to obtain vector representations of graph nodes. Example input and output files, along with descriptions, can be found in the `graph_model` directory. The full graph used in the study is available upon request due to its large size:
+1. Train the Graph Neural Network (GraphSAGE approach) to obtain vector representations of graph nodes:
 
 ```bash
 python st1.train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> --output <path_to_output_embeddings_csv>
@@ -60,10 +60,10 @@ python run_pipeline.py
 
 ## Data
 
-- The ANDSystem graph is available upon request
+- The ANDSystem graph is available upon request, the examples of input and output formats with description, can be found in the `./graph_model/` folder. The entire graph used in the study, due to its large size, is available upon request.
 - ANDDigest database: https://anddigest.sysbio.ru/
-- Fine-tuned LLM: https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI
-- Training dataset: https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI
+- Fine-tuned LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
+- Dataset, used for the LLM fine-tuning: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
 
 ## Results
 
