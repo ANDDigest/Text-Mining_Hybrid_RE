@@ -25,7 +25,7 @@ Key components:
 ### Installation
 
 ```bash
-git clone https://github.com/ANDDigest/BreadcrumbsText-Mining_Hybrid_RE.git
+git clone https://github.com/ANDDigest/Text-Mining_Hybrid_RE.git
 cd BreadcrumbsText-Mining_Hybrid_RE
 pip install -r requirements.txt
 ```
