@@ -34,7 +34,6 @@ pip install -r requirements.txt
 ## Usage
 
 1. Train the Graph Neural Network (GraphSAGE approach) to obtain vector representations of graph nodes:
-
 ```bash
 python st1.train_gnn.py --edges <path_to_input_edges_csv> --nodes <path_to_input_nodes_csv> --output <path_to_output_embeddings_csv>
 ```
@@ -53,6 +52,7 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
     3.1. The fine-tuning process was performed under MAC OS, with a following parameters, using the [mlx_lm](https://github.com/ml-explore/mlx-examples/tree/main/llms/mlx_lm):
     - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study the [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used);
     - `--data`: Path to the dataset used in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset).
+<br>
     ```bash
     mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-        batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
     ```
