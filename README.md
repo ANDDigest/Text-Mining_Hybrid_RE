@@ -39,8 +39,8 @@ pip install -r requirements.txt
 python st1.train_gnn.py --edges <path_to_edges_csv> --nodes <path_to_nodes_csv> --output <path_to_output_embeddings_csv>
 ```
 
-- `--edges`: Path to the edges CSV file (default: `./graph_model/st1.edges.csv`)
-- `--nodes`: Path to the nodes CSV file (default: `./graph_model/st1.nodes.csv`)
+- `--edges`: Path to the edges CSV file (default: `./graph_model/edges.csv`)
+- `--nodes`: Path to the nodes CSV file (default: `./graph_model/nodes.csv`)
 - `--output`: Path to save the generated node embeddings (default: `./graph_model/st2.node_embeddings.64_32.csv`)
 
 2. Train the Binary Classifier:
