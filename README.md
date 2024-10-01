@@ -117,7 +117,7 @@ This project is licensed under the [MIT License].
 
 ## Acknowledgments
 
-[List any acknowledgments or funding sources]
+This study was funded by the Analytical Center for the Government of the Russian Federation: 70-2023-001318
 
 ## Contact
 
