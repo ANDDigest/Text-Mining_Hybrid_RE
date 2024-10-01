@@ -1,6 +1,4 @@
-Here's a draft README.md for the GitHub project based on the manuscript:
-
-# ANDDigest Classification Models
+# Hybrid Approach, combining Structured Ontology Model, Co-occurrence, Graph Neural Network, and Large Language Model, to Extraction of Protein Interaction from Scientific Literature
 
 This repository contains the code and models for a hybrid approach to knowledge extraction from scientific publications using structured ontology models, graph neural networks (GNNs), and large language models (LLMs).
 
