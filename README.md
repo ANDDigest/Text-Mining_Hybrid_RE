@@ -48,7 +48,8 @@ python st1.train_gnn.py --edges <path_to_input_edges_csv> --nodes <path_to_input
 python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <path_to_input_test_csv> --validation <path_to_input_validation_csv> --output <path_to_output_model_weights>
 ```
 
-3. Fine-tune the Large Language Model:
+3. Fine-tune the Large Language Model:<br>
+
     3.1. The fine-tuning process was performed under MAC OS, with a following parameters, using the [mlx_lm](https://github.com/ml-explore/mlx-examples/tree/main/llms/mlx_lm):
     - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study the [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used);
     - `--data`: Path to the dataset used in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset).
