@@ -52,7 +52,7 @@ pip install -r requirements.txt
 **1. Train the Graph Neural Network (GraphSAGE approach):**
 
 ```bash
-python st1.train_gnn.py --edges <path_to_input_edges_csv> --nodes <path_to_input_nodes_csv> --output <path_to_output_embeddings_csv>
+python st1.train_gnn.py --edges /path/to/edges_csv --nodes /path/to/nodes.csv --output /path/to/output_embeddings.csv
 ```
 
 Parameters:
@@ -78,8 +78,17 @@ Parameters:
 **3. Train the Binary MLP Classifier:**
 
 ```bash
-python st3.train_MLP_classifier.py --train <path_to_input_training_csv> --test <path_to_input_test_csv> --validation <path_to_input_validation_csv> --output <path_to_output_model_weights>
+python st3.MLP_classifier_train.py --datasets_folder /path/to/datasets_folder --model_states_folder /path/to/save_model
 ```
+
+Parameters:
+- `--datasets_folder`: (default: `./graph_model/edges.csv`) The script expects the following three files to be located inside the specified datasets folder:
+	  •	st2.ppi_training_set.csv
+	  •	st2.ppi_validation_set.csv
+	  •	st2.ppi_testing_set.csv
+- `--input_edges`: Path to the edges CSV file (default: `./graph_model/nodes.csv`)
+- `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
+- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved (default: `./graph_model/mlp_dataset/`)
 
 **4. Fine-tune the Large Language Model:**
 
