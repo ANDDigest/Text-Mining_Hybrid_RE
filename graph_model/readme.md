@@ -22,5 +22,6 @@ The `edges.csv` file contains the information about the edges (connections) betw
 
 The output of the training process is a **`node_embeddings.128_64.csv`** file, where 128 and 64 correspond to the number of neurons in the hidden layers, the first column of which contains the inner ID for each node from the **nodes.csv** and its 64-dimensional vector representation (embedding) in the graph. This vector represents the node's learned features, used for further training of the MLP classifier for the graph-based protein interaction prediction task.
 
+
 > [!NOTE]
-> The original files of the ANDSystem graph for <i>Human</i> organism, used in our manuscript, as well as vector representations of its nodes, due to their large size, are available upon request.
+> The original files of the ANDSystem graph for <i>Human</i> organism, used in our study, as well as vector representations of its nodes, due to their large size, are available upon request.
