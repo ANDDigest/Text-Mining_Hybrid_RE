@@ -10,7 +10,7 @@ use File::Path qw(make_path);
 my $input_nodes = './graph_model/nodes.csv';
 my $input_edges = './graph_model/edges.csv';
 my $input_embeddings = './graph_model/node_embeddings.128_64.csv';
-my $output_ppi_learning_set = './graph_model/mlp_dataset/';
+my $output_ppi_learning_set = './MLP_classifier/dataset/';
 
 # Get command-line arguments
 GetOptions(
