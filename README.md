@@ -75,7 +75,7 @@ Parameters:
 > [!NOTE]
 > Our study utilized a comprehensive training dataset consisting of 460,000 pairwise protein interactions, derived from the vector representations of corresponding nodes in the ANDSystem graph. This dataset was carefully divided into three subsets: a training set with 200,000 positive and 200,000 negative examples, a validation set containing 20,000 examples of each type, and a testing set with 10,000 examples of each type. Positive examples were defined as pairs of proteins connected by an edge in the [ANDSystem](https://link.springer.com/article/10.1186/s12859-018-2567-6) graph, while negative examples were pairs without such connections. Due to the substantial size of these dataset files, we have included only a small sample in the `./MLP_classifier/dataset/` directory for reference. However, the complete original version used in our manuscript can be available upon request.
 
-### 3. Train the Binary MLP Classifier
+**3. Train the Binary MLP Classifier:**
 
 ```bash
 python st3.MLP_classifier_train.py --datasets_folder /path/to/datasets_folder --model_states_folder /path/to/save_model
