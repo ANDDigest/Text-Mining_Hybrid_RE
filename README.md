@@ -62,11 +62,7 @@ Parameters:
 **2. Embeddings-based MLP learning set formation:**
 
 ```bash
-python3 script.py \
-  --input_nodes /path/to/nodes.csv \
-  --input_edges /path/to/edges.csv \
-  --input_embeddings /path/to/embeddings.csv \
-  --output_ppi_learning_set /path/to/output/directory/
+perl script.pl --input_nodes=./path/to/nodes.csv --input_edges=./path/to/edges.csv --input_embeddings=./path/to/embeddings.csv --output_ppi_learning_set=./path/to/output/
 ```
 
 Parameters:
