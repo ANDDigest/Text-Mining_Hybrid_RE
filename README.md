@@ -37,6 +37,7 @@ Key components:
 - Transformers 4.42.4+
 - Scikit-learn 1.5.0+
 - Pandas
+- NumPy
 
 ### Installation
 
