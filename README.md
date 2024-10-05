@@ -132,7 +132,7 @@ Parameters:
 
 ## Results
 
-The pipeline achieved an accuracy of 0.772 (Matthews correlation coefficient) when evaluated on a corpus of experimentally confirmed protein interactions.
+The method achieved an accuracy of 0.772 (Matthews correlation coefficient) when evaluated on a corpus of experimentally confirmed protein interactions.
 
 ## Citation
 
