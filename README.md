@@ -62,14 +62,14 @@ Parameters:
 **2. Embeddings-based MLP learning set formation:**
 
 ```bash
-perl script.pl --input_nodes=./path/to/nodes.csv --input_edges=./path/to/edges.csv --input_embeddings=./path/to/embeddings.csv --output_ppi_learning_set=./path/to/output/
+perl st2.MLP_dataset_gen.pl --input_nodes=./path/to/nodes.csv --input_edges=./path/to/edges.csv --input_embeddings=./path/to/embeddings.csv --output_ppi_learning_set=./path/to/output/
 ```
 
 Parameters:
 - `--input_nodes`: Path to the nodes CSV file (default: `./graph_model/edges.csv`)
 - `--input_edges`: Path to the edges CSV file (default: `./graph_model/nodes.csv`)
 - `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
-- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved
+- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved (default: `./graph_model/mlp_dataset/`)
 
 **3. Train the Binary MLP Classifier:**
 
