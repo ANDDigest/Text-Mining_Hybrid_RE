@@ -59,15 +59,31 @@ Parameters:
 - `--nodes`: Path to the nodes CSV file (default: `./graph_model/nodes.csv`)
 - `--output`: Path to save the generated node embeddings (default: `./graph_model/node_embeddings.128_64.csv`)
 
-**2. Train the Binary MLP Classifier:**
+**2. Embeddings-based MLP learning set formation:**
 
 ```bash
-python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <path_to_input_test_csv> --validation <path_to_input_validation_csv> --output <path_to_output_model_weights>
+python3 script.py \
+  --input_nodes /path/to/nodes.csv \
+  --input_edges /path/to/edges.csv \
+  --input_embeddings /path/to/embeddings.csv \
+  --output_ppi_learning_set /path/to/output/directory/
 ```
 
-**3. Fine-tune the Large Language Model:**
+Parameters:
+- `--input_nodes`: Path to the nodes CSV file (default: `./graph_model/edges.csv`)
+- `--input_edges`: Path to the edges CSV file (default: `./graph_model/nodes.csv`)
+- `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
+- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved
 
-  <i> 3.1. Fine-tune the model using mlx_lm:</i>
+**3. Train the Binary MLP Classifier:**
+
+```bash
+python st3.train_MLP_classifier.py --train <path_to_input_training_csv> --test <path_to_input_test_csv> --validation <path_to_input_validation_csv> --output <path_to_output_model_weights>
+```
+
+**4. Fine-tune the Large Language Model:**
+
+  <i> 4.1. Fine-tune the model using mlx_lm:</i>
    
    ```bash
    mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
@@ -77,7 +93,7 @@ python st2.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
    - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study, [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used)
    - `--data`: Path to the dataset for using in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
 
-   <i>3.2. Fuse the adapter with the base model:</i>
+   <i>4.2. Fuse the adapter with the base model:</i>
    
    ```bash
    mlx_lm.fuse --model <base_model_path> --adapter-file <path_to_adapter> --save-path <fused_model_path> --de-quantize
