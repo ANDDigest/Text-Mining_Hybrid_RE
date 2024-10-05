@@ -1,4 +1,4 @@
-This folder contains the archive with a dataset of protein embeddings, obtained by the performing of `st1.train_gnn.py` script from the main folder. for the training of the classification model based on the Multi Layer Perceptron with three hidden layers.
+This folder contains the trained binary classification model based on the Multi Layer Perceptron with three hidden layers.
 
 ## Content
 
