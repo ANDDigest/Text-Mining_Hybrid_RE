@@ -75,20 +75,23 @@ Parameters:
 > [!NOTE]
 > Our study utilized a comprehensive training dataset consisting of 460,000 pairwise protein interactions, derived from the vector representations of corresponding nodes in the ANDSystem graph. This dataset was carefully divided into three subsets: a training set with 200,000 positive and 200,000 negative examples, a validation set containing 20,000 examples of each type, and a testing set with 10,000 examples of each type. Positive examples were defined as pairs of proteins connected by an edge in the [ANDSystem](https://link.springer.com/article/10.1186/s12859-018-2567-6) graph, while negative examples were pairs without such connections. Due to the substantial size of these dataset files, we have included only a small sample in the `./MLP_classifier/dataset/` directory for reference. However, the complete original version used in our manuscript can be available upon request.
 
-**3. Train the Binary MLP Classifier:**
+### 3. Train the Binary MLP Classifier
 
 ```bash
 python st3.MLP_classifier_train.py --datasets_folder /path/to/datasets_folder --model_states_folder /path/to/save_model
 ```
 
 Parameters:
-- `--datasets_folder`: (default: `./graph_model/edges.csv`) The script expects the following three files to be located inside the specified datasets folder:
-	  •	st2.ppi_training_set.csv
-	  •	st2.ppi_validation_set.csv
-	  •	st2.ppi_testing_set.csv
-- `--input_edges`: Path to the edges CSV file (default: `./graph_model/nodes.csv`)
-- `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
-- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved (default: `./graph_model/mlp_dataset/`)
+- `--datasets_folder`: Directory containing the dataset files (default: `./MLP_classifier/dataset/`)
+  The script expects the following three files in this directory:
+  - `st2.ppi_training_set.csv`
+  - `st2.ppi_validation_set.csv`
+  - `st2.ppi_testing_set.csv`
+
+- `--model_states_folder`: Directory where the trained model will be saved (default: `./MLP_classifier/`). The trained model will be saved as `PPI_mlp_model.pth`.
+
+> [!IMPORTANT]
+> The file `./MLP_classifier/PPI_mlp_model.pth` in this repository contains the weights of the trained classification model used in our research for predicting interactions between protein pairs.
 
 **4. Fine-tune the Large Language Model:**
 
