@@ -18,5 +18,6 @@ Each subset is represented by a CSV file with the following column structure:
 4. **Column 130**: Co-occurrence value, calculated as `(1 - p-value)` for positive examaples, and a random float in the range `(0,1)` for the `30%` of negatives.
 5. **Last column**: Label indicating the presence (`1`) or absence (`0`) of an edge between the proteins in `../graph_model/edges.csv`.
 
-#### Note on Dataset Samples
-Due to file size constraints, only small samples of the dataset are provided in this repository. These samples are intended to illustrate the data format and structure. The complete dataset used in our study is available upon request.
+> [!NOTE]
+> #### Note on Dataset Samples
+> Due to file size constraints, only small samples of the dataset are provided in this repository. These samples are intended to illustrate the data format and structure. The complete dataset used in our study is available upon request.
