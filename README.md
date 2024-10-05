@@ -71,6 +71,9 @@ Parameters:
 - `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
 - `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved (default: `./graph_model/mlp_dataset/`)
 
+> [!NOTE]
+> Given that the training dataset used in our study comprised a total of 460,000 pairwise protein interactions (200,000 positive and 200,000 negative examples in the training set, 20,000 each in the validation set, and 10,000 each in the testing set), based on the vector representations of the corresponding nodes, here, in the ./graph_model/mlp_dataset/ directory, is provided only the small sample of this dataset due to the large size of the files. The original version used in our manuscript is available upon request.
+
 **3. Train the Binary MLP Classifier:**
 
 ```bash
