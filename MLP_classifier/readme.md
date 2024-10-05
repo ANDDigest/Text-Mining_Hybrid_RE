@@ -13,8 +13,8 @@ The `dataset` folder contains sample files demonstrating the format of the datas
 Each subset is represented by a CSV file with the following column structure:
 
 1. **First column**: Contains the ANDSystem IDs of the source and target proteins, separated by an underscore (`_`). These IDs correspond to the last column in `../graph_model/nodes.csv`.
-2. **Columns 2-65**: 64 comma-separated values representing the vector features of the first node's embeddings.
-3. **Columns 66-129**: 64 comma-separated values representing the vector features of the second node's embeddings.
+2. **Columns 2-65**: 64 comma-separated values representing the vector features of the first node's embeddings in `../graph_model/node_embeddings.128_64.csv`.
+3. **Columns 66-129**: 64 comma-separated values representing the vector features of the second node's embeddings in `../graph_model/node_embeddings.128_64.csv`.
 4. **Column 130**: Co-occurrence value, calculated as `(1 - p-value)` for positive examaples, and a random float in the range `(0,1)` for the `30%` of negatives.
 5. **Last column**: Label indicating the presence (`1`) or absence (`0`) of an edge between the proteins in `../graph_model/edges.csv`.
 
