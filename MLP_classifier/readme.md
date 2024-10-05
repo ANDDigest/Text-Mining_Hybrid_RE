@@ -5,11 +5,18 @@ This folder contains the trained binary classification model based on the Multi 
 ### `PPI_mlp_model.pth`
 `PPI_mlp_model.pth` - the weights in the PyTorch serialized tensors format of our MultiLayer Perceptron (MLP) model, trained for predicting edges between the protein pairs based on the Graph structure. These weights were utilized in our study.
 
-### `dataset`
-`dataset` - the folder contains examples of the dataset format used in the training of MultiLayer Perceptron (MLP) model. The dataset is split into three sets: training, testing, and validation. Each set is presented by the CSV table with a comma-separated columns, where the first column contains ANDSystem's IDs of the source and the target proteins, corresponding to the '../graph_model/node_embeddings.128_64.csv' divided by the `_` symbol. ...
+### `dataset` Directory
 
-Content:
-- `st2.ppi_testing_set.csv`: testing set examples
-- `--input_edges`: Path to the edges CSV file (default: `./graph_model/nodes.csv`)
-- `--input_embeddings`: Path to the node embeddings obtained in **step 1** (default: `./graph_model/node_embeddings.128_64.csv`)
-- `--output_ppi_learning_set`: Path where the generated training, validation and testing sets are saved (default: `./graph_model/mlp_dataset/`)
+The `dataset` folder contains sample files demonstrating the format of the dataset used for training the MultiLayer Perceptron (MLP) model. The complete dataset is divided into three subsets: training, testing, and validation.
+
+#### File Structure
+Each subset is represented by a CSV file with the following column structure:
+
+1. **First column**: Contains the ANDSystem IDs of the source and target proteins, separated by an underscore (`_`). These IDs correspond to the last column in `../graph_model/nodes.csv`.
+2. **Columns 2-65**: 64 comma-separated values representing the vector features of the first node's embeddings.
+3. **Columns 66-129**: 64 comma-separated values representing the vector features of the second node's embeddings.
+4. **Column 130**: Co-occurrence value, calculated as `(1 - p-value)`.
+5. **Last column**: Label indicating the presence (1) or absence (0) of an edge between the proteins in `../graph_model/edges.csv`.
+
+#### Note on Dataset Samples
+Due to file size constraints, only small samples of the dataset are provided in this repository. These samples are intended to illustrate the data format and structure. The complete dataset used in our study is available upon request.
