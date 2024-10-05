@@ -24,4 +24,4 @@ The output of the training process is a **`node_embeddings.128_64.csv`** file, w
 
 
 > [!NOTE]
-> The original files of the ANDSystem graph for <i>Human</i> organism, used in our study, as well as vector representations of its nodes, due to the large size, are available upon request.
+> The original files of the ANDSystem graph for <i>Human</i> organism, used in our study, as well as vector representations of its nodes, due to the large size, are not provided in this repository and are available upon request.
