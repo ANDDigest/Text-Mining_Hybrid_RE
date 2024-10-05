@@ -122,12 +122,12 @@ Parameters:
 
 ## Data
 
-- ANDSystem graph: Available upon request (examples in `./graph_model/` folder)
+- ANDSystem graph, node embeddings and MLP full training dataset: Available upon request (examples in `./graph_model/` and `./MLP_classifier/dataset/` folders)
 - MLP classifier weights: Available in `./MLP_classifier/` folder
 - ANDDigest database: https://anddigest.sysbio.ru/
 - Base LLM: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
-- Fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
-- Fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
+- Our fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
+- Our fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
 - Non-interacting proteins list: [Stelzl2005](http://www.russelllab.org/negatives/)
 
 ## Results
