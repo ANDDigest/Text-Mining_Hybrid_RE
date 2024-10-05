@@ -34,7 +34,7 @@ Key components:
 - PyTorch 1.13.0+
 - PyTorch Geometric 2.5.3+
 - MLX-LM 0.16.1+
-- Hugging Face Transformers
+- Transformers 4.42.4+
 - Scikit-learn 1.5.0+
 - Pandas
 
