@@ -90,7 +90,7 @@ python st3.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
 
    Parameters:
    - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study, [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used)
-   - `--data`: Path to the dataset for using in the fine-tuning process (available at [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
+   - `--data`: Path to the dataset for using in the fine-tuning process (available at huggingface [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
 
    <i>4.2. Fuse the adapter with the base model:</i>
    
@@ -101,7 +101,7 @@ python st3.train_MLP_classifier.py --train <path_to_input_training_csv> --test <
    Parameters:
    - `--model`: Path to the base pre-trained LLM (same as in step 3.1)
    - `--adapter-file`: Path to the LoRA adapter obtained from step 3.1
-   - `--save-path`: Path to save the fused model (The Fused LLM, used in our study, is available at [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
+   - `--save-path`: Path to save the fused model (The Fused LLM, used in our study, is available at huggingface [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
 
 ## Usage
 
