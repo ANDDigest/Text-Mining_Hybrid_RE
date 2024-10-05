@@ -128,7 +128,7 @@ Parameters:
 - Base LLM: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
 - Fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
 - Fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
-- Non-interacting proteins list: [Stelzl2005](http://www.russelllab.org/negatives/) [PubMed](https://pubmed.ncbi.nlm.nih.gov/16169070/)
+- Non-interacting proteins list: [Stelzl2005](http://www.russelllab.org/negatives/)
 
 ## Results
 
