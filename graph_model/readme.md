@@ -1,5 +1,8 @@
 This folder contains examples for demonstration purposes only, illustrating the format we used to train our Graph Neural Network (GNN) using the GraphSAGE approach and obtain vector representations (embeddings) of graph nodes. Due to the very small size of this sample graph, the training script may not be able to compute metrics during the training process, which could result in warnings. The graph is represented by two separate CSV files: **`edges.csv`** and **`nodes.csv`**.
 
+> [!NOTE]
+> The original files of the ANDSystem graph for <i>Human</i> organism, used in our manuscript, as well as vector representations of its nodes, due to their large size, are available upon request.
+
 ## Input Data
 
 ### 1. `nodes.csv`
