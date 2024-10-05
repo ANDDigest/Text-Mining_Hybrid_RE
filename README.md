@@ -21,7 +21,7 @@ This repository contains the code and models for a hybrid approach to knowledge 
 
 Our method combines text-mining techniques with GNNs and fine-tuned LLMs to extend biomedical knowledge graphs and interpret predicted edges based on published literature. The approach achieves high accuracy in predicting protein-protein interactions and can be applied to analyze complex disorders like insomnia.
 
-Key components:
+### Key components:
 - Graph Neural Network for learning node embeddings
 - Binary classifier based on a Multilayer Perceptron 
 - Fine-tuned Large Language Model for validating predictions in the literature
