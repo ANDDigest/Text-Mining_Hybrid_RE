@@ -1,4 +1,4 @@
-# Hybrid Approach for Protein Interaction Extraction from Scientific Literature
+# Hybrid approach to knowledge extraction from scientific publications using structured ontology models, graph neural networks, and large language models
 
 This repository contains the code and models for a hybrid approach to knowledge extraction from scientific publications, combining structured ontology models, pairwise co-occurrence, graph neural networks (GNNs), and large language models (LLMs).
 
