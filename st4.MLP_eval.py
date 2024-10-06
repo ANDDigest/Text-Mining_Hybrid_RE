@@ -3,6 +3,21 @@ import torch
 import torch.nn as nn
 import argparse
 
+# Parse command-line arguments with default values
+parser = argparse.ArgumentParser(description='Run MLP model on input data.')
+parser.add_argument('--input_file_path', type=str, default='./validation/intact_positive_PPI_2024-07-11-08-09.GNN_input.csv',
+                    help='Path to the input CSV file.')
+parser.add_argument('--model_path', type=str, default='./MLP_classifier/PPI_mlp_model.pth',
+                    help='Path to the saved PyTorch model.')
+parser.add_argument('--output_file_path', type=str, default='./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv',
+                    help='Path to save the output CSV file.')
+
+args = parser.parse_args()
+
+input_file_path = args.input_file_path
+model_path = args.model_path
+output_file_path = args.output_file_path
+
 # Define the neural network model
 class MLP(nn.Module):
     def __init__(self):
@@ -20,47 +35,26 @@ class MLP(nn.Module):
         x = self.sigmoid(self.output(x))
         return x
 
-# Parse command-line arguments
-def parse_args():
-    parser = argparse.ArgumentParser(description="Run MLP classifier on input data.")
-    parser.add_argument('--input_file', type=str, default='./MLP_classifier/validation/MLP_negative.stelzl2005.input.csv', 
-                        help='Path to the input CSV file.')
-    parser.add_argument('--model_file', type=str, default='./MLP_classifier/PPI_mlp_model.pth', 
-                        help='Path to the saved model file.')
-    parser.add_argument('--output_file', type=str, default='./MLP_classifier/validation/MLP_negative.stelzl2005.output.csv', 
-                        help='Path to the output CSV file.')
-    return parser.parse_args()
+# Load and preprocess the input data
+data = pd.read_csv(input_file_path, header=None)
+ids = data.iloc[:, 0].values  # First column as IDs
+X = data.iloc[:, 1:].values   # All columns except the first as input features
 
-# Main function
-def main():
-    # Get command-line arguments
-    args = parse_args()
+# Load the saved model
+model = MLP()
+model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+model.eval()
 
-    # Load and preprocess the input data
-    input_file_path = args.input_file
-    data = pd.read_csv(input_file_path, header=None)
-    ids = data.iloc[:, 0].values  # First column as IDs
-    X = data.iloc[:, 1:].values  # All columns except the first as input features
+# Convert input data to torch tensor
+X_tensor = torch.tensor(X, dtype=torch.float32)
 
-    # Load the saved model
-    model = MLP()
-    model.load_state_dict(torch.load(args.model_file))
-    model.eval()
+# Perform predictions
+with torch.no_grad():
+    outputs = model(X_tensor).squeeze()
+    predictions = (outputs > 0.5).int().numpy()
 
-    # Convert input data to torch tensor
-    X_tensor = torch.tensor(X, dtype=torch.float32)
+# Save the results to a CSV file
+output_df = pd.DataFrame({'ID': ids, 'Prediction': predictions})
+output_df.to_csv(output_file_path, index=False)
 
-    # Perform predictions
-    with torch.no_grad():
-        outputs = model(X_tensor).squeeze()
-        predictions = (outputs > 0.5).int().numpy()
-
-    # Save the results to a CSV file
-    output_df = pd.DataFrame({'ID': ids, 'Prediction': predictions})
-    output_file_path = args.output_file
-    output_df.to_csv(output_file_path, index=False)
-
-    print(f'Predictions saved to {output_file_path}')
-
-if __name__ == "__main__":
-    main()
+print(f'Predictions saved to {output_file_path}')
