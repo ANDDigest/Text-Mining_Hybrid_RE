@@ -136,15 +136,18 @@ Parameters:
 
 ```bash
 python st6.LLM_eval.py  \
-    --input_file_path '/path/to/vectorized_protein_pairs.csv' \
-    --model_path '/path/to/MLP_model.pth' \
-    --output_file_path '/path/to/output_file.csv'
+    --input_tsv_file '/path/to/your/input_file.tsv' \
+    --output_tsv_file '/path/to/your/output_file.tsv' \
+    --model_name 'model_name_or_path'
 ```
 
 Parameters:
-- `--input_file_path`: Path to the file with vectorized node pairs in the CSV format (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_input.csv`)
-- `--model_path`: Path to the trained MLP binary classification (default: `./MLP_classifier/PPI_mlp_model.pth`)
-- `--output`: Path to the model's prediction results (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv`)
+- `--input_tsv_file`: [to be added]
+- `--output_tsv_file`: [to be added]
+- `--model_name`: [to be added]
+
+> [!NOTE]
+> The script expects each row in the input TSV file to have at least four columns. The prompt to process is assumed to be in the fourth column (row[3]). If a row has fewer than four columns, it is skipped with a warning message. The more detailed information about the input formats is available in the `./validation/` folder.
 
 ## Validation Datasets
 
