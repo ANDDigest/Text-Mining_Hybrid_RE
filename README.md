@@ -118,7 +118,20 @@ Parameters:
 
 ## Usage
 
-[to be added 06.10.2024]
+**1. Classifier MLP Model Nodes Prediction:**
+
+```bash
+python st1.train_gnn.py --edges /path/to/edges_csv --nodes /path/to/nodes.csv --output /path/to/output_embeddings.csv
+```
+
+Parameters:
+- `--edges`: Path to the edges CSV file (default: `./graph_model/edges.csv`)
+- `--nodes`: Path to the nodes CSV file (default: `./graph_model/nodes.csv`)
+- `--output`: Path to save the generated node embeddings (default: `./graph_model/node_embeddings.128_64.csv`)
+
+## Evaluation Datasets
+
+[to be added 07.10.2024]
 
 ## Data
 
