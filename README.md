@@ -121,7 +121,7 @@ Parameters:
 **1. Classifier MLP Model Nodes Prediction:**
 
 ```bash
-python st1.train_gnn.py --edges /path/to/edges_csv --nodes /path/to/nodes.csv --output /path/to/output_embeddings.csv
+python st5.train_gnn.py --edges /path/to/edges_csv --nodes /path/to/nodes.csv --output /path/to/output_embeddings.csv
 ```
 
 Parameters:
