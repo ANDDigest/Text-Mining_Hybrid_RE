@@ -118,7 +118,7 @@ Parameters:
 
 ## Usage
 
-**1. Classifier MLP Model Nodes Prediction:**
+**1. MLP Model for Edges Classification:**
 
 ```bash
 python st5.MLP_eval.py  \
@@ -128,13 +128,29 @@ python st5.MLP_eval.py  \
 ```
 
 Parameters:
-- `--edges`: Path to the edges CSV file (default: `./graph_model/edges.csv`)
-- `--nodes`: Path to the nodes CSV file (default: `./graph_model/nodes.csv`)
-- `--output`: Path to save the generated node embeddings (default: `./graph_model/node_embeddings.128_64.csv`)
+- `--input_file_path`: Path to the file with vectorized node pairs in the CSV format (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_input.csv`)
+- `--model_path`: Path to the trained MLP binary classification (default: `./MLP_classifier/PPI_mlp_model.pth`)
+- `--output`: Path to the model's prediction results (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv`)
 
-## Evaluation Datasets
+**2. LLM for Context-based Edges Classification:**
 
-[to be added 07.10.2024]
+```bash
+python st6.LLM_eval.py  \
+    --input_file_path '/path/to/vectorized_protein_pairs.csv' \
+    --model_path '/path/to/MLP_model.pth' \
+    --output_file_path '/path/to/output_file.csv'
+```
+
+Parameters:
+- `--input_file_path`: Path to the file with vectorized node pairs in the CSV format (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_input.csv`)
+- `--model_path`: Path to the trained MLP binary classification (default: `./MLP_classifier/PPI_mlp_model.pth`)
+- `--output`: Path to the model's prediction results (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv`)
+
+## Validation Datasets
+
+> [!IMPORTANT]
+> Detailed description of input formats of data, used by each model, are available inside the `./validation/` folder
+> [to be added 07.10.2024]
 
 ## Data
 
