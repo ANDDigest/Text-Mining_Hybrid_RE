@@ -70,7 +70,7 @@ The TSV files provided in this repository contain data used to evaluate the accu
 
 ### Usage
 
-The set with positive examples was split into the two parts and archived, since the requirements to the uploding files size via the GitHub web-interface. In our study both parts were used for the assessement. The provided files can be reprocessed by the `../st6.LLM_eval.py`, according to the Usage section on the main page of this repository.
+The set with positive examples was split into the two parts and archived, since the requirements to the uploding files size via the GitHub web-interface. In our study both parts were used for the assessement. The provided files can be reprocessed by the `../../st6.LLM_eval.py`, according to the Usage section on the main page of this repository.
 
 ### Additional Information
 
