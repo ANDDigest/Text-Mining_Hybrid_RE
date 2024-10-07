@@ -136,8 +136,8 @@ Parameters:
 
 ```bash
 python st6.LLM_eval.py  \
-    --input_tsv_file '/path/to/your/input_file.tsv' \
-    --output_tsv_file '/path/to/your/output_file.tsv' \
+    --input_tsv_file '/path/to/input_file.tsv' \
+    --output_tsv_file '/path/to/output_file.tsv' \
     --model_name 'model_name_or_path'
 ```
 
