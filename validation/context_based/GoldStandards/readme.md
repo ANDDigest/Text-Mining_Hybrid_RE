@@ -1,6 +1,6 @@
-# GoldStandards Subfolder
+# GoldStandards
 
-The `GoldStandards` subfolder contains datasets used to evaluate the accuracy of our fine-tuned Large Language Model (LLM) in predicting protein–protein interactions based on textual data. These datasets are derived from established gold standard corpora and include both positive and negative examples.
+This folder contains datasets used to evaluate the accuracy of our fine-tuned Large Language Model (LLM) in predicting protein–protein interactions based on textual data. These datasets are derived from established gold standard corpora and include both positive and negative examples.
 
 ## Contents
 
