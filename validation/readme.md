@@ -72,13 +72,7 @@ Each row in the TSV file represents a pair of proteins along with contextual inf
 
 ## Usage
 
-The results obtained in our study with the fine-tuned LLM module can be replicated using the provided data files.
-
-- **Data Analysis**: Each row can be parsed to extract the proteins of interest, their interaction context, and the LLM's prediction for further analysis or validation.
-
-- **Model Evaluation**: Compare the LLM's predictions against known interactions to assess model performance.
-
-- **Research and Development**: Use the prompts and LLM outputs as a basis for developing improved models or for understanding the nuances in protein–protein interaction predictions.
+The results obtained in our study can be replicated using the provided data files, with our fine-tuned LLM model (Timofey/Gemma-2-9b-it-Fused_PPI)[https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI], using the `../st6.LLM_eval.py` script.
 
 ## Additional Information
 
