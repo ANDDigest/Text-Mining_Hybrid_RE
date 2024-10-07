@@ -157,16 +157,16 @@ Parameters:
 ## Data
 
 - ANDSystem graph, node embeddings and MLP full training dataset: Available upon request (examples in `./graph_model/` and `./MLP_classifier/dataset/` folders)
-- MLP classifier weights: Available in `./MLP_classifier/` folder
+- Graph-based MLP binary classification model, used in our study: Available in `./MLP_classifier/` folder
 - ANDDigest database: https://anddigest.sysbio.ru/
-- Base LLM, used for fine-tuning in our study: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
+- LLM, used in our study as a base model for fine-tuning: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
 - Our fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
 - Our fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
 - List of human protein pairs, experimentally shown as non-interacting: [Stelzl2005](http://www.russelllab.org/negatives/)
 
 ## Results
 
-The method achieved an accuracy of 0.772 (Matthews correlation coefficient) when evaluated on a corpus of experimentally confirmed protein interactions.
+The method achieved an accuracy of `0.772` (Matthews correlation coefficient) when evaluated on a corpus of experimentally confirmed protein interactions.
 
 ## Citation
 
