@@ -74,7 +74,7 @@ The set with positive examples was split into the two parts and archived, since 
 
 ### Additional Information
 
-- **Fine-tuned LLM**: The language model has been specifically trained by us to interpret scientific texts and predict protein interactions based on contextual information. Is available via the HuggingFace repo (Timofey/Gemma-2-9b-it-Fused_PPI)[https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI/]
+- **Fine-tuned LLM**: The language model has been specifically trained by us to interpret scientific texts and predict protein interactions based on contextual information. Is available via the HuggingFace repo ( `Timofey/Gemma-2-9b-it-Fused_PPI` )[https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI].
 
 - **Data Sources**:
   - **ANDSystem/ANDDigest Databases**: Provides the protein IDs and co-occurrence statistics.
