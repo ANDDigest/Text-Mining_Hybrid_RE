@@ -72,7 +72,7 @@ Each row in the TSV file represents a pair of proteins along with contextual inf
 
 ## Usage
 
-The results obtained in our study can be replicated using the provided data files, with our fine-tuned LLM model (Timofey/Gemma-2-9b-it-Fused_PPI)[https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI], using the `../st6.LLM_eval.py` script.
+The results obtained in our study can be replicated using the provided data files, with our fine-tuned LLM model (Timofey\/Gemma-2-9b-it-Fused_PPI)[https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI], using the `../st6.LLM_eval.py` script.
 
 ## Additional Information
 
