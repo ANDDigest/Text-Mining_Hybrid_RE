@@ -130,7 +130,7 @@ python st5.MLP_eval.py  \
 Parameters:
 - `--input_file_path`: Path to the file with vectorized node pairs in the CSV format (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_input.csv`)
 - `--model_path`: Path to the trained MLP binary classification (default: `./MLP_classifier/PPI_mlp_model.pth`)
-- `--output`: Path to the model's prediction results (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv`)
+- `--output`: Path to the graph-based classification model prediction results (default: `./validation/intact_positive_PPI_2024-07-11-08-09.GNN_output.csv`)
 
 **2. LLM for Context-based Edges Classification:**
 
@@ -142,12 +142,12 @@ python st6.LLM_eval.py  \
 ```
 
 Parameters:
-- `--input_tsv_file`: path to the TSV file, containing the list of prompts (default: )
-- `--output_tsv_file`: [to be added]
-- `--model_name`: [to be added]
+- `--input_tsv_file`: path to the input TSV file, containing the list of prompts (default: `./validation/context_based/16169070_PPI.LLM_input_and_output.tsv`)
+- `--output_tsv_file`: path to the output TSV file, containing the column with model outputs (default: `./validation/context_based/16169070_PPI.LLM_output.tsv`)
+- `--model_name`: Name or local path of the HuggingFace Transformer model to use (default: `Timofey/Gemma-2-9b-it-Fused_PPI`).
 
-> [!NOTE]
-> The script expects each row in the input TSV file to have at least four columns. The prompt to process is assumed to be in the fourth column (row[3]). If a row has fewer than four columns, it is skipped with a warning message. The more detailed information about the input formats is available in the `./validation/` folder.
+>[!IMPORTANT]
+>The script expects each row in the input TSV file to have at least four columns. The prompt to process is assumed to be in the fourth column (`row[3]`). If a row has fewer than four columns, it is skipped with a warning message. The content inside the other columns, e.g., `rows[0-2]` or `row[4]`, isn't directly used by the model, and these fields can be left empty if needed. More detailed information about the format, as well as validation examples used in our study, available at `./validation/context_based/`
 
 ## Validation Datasets
 
