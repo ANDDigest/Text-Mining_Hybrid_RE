@@ -61,11 +61,11 @@ if __name__ == "__main__":
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description='Process a TSV file using a HuggingFace Transformer model.')
     parser.add_argument('--input_tsv_file', type=str, required=True,
-                        help='Path to the input TSV file.')
+                        help='Path to the input TSV file with LLM prompts.', default='./validation/context_based/16169070_PPI.LLM_input_and_output.tsv')
     parser.add_argument('--output_tsv_file', type=str, required=True,
-                        help='Path to the output TSV file.')
+                        help='Path to the output TSV file.', default='./validation/context_based/16169070_PPI.LLM_output.tsv')
     parser.add_argument('--model_name', type=str, required=True,
-                        help='Name or path of the HuggingFace Transformer model.')
+                        help='Name or path of the HuggingFace Transformer model.', default='Timofey/Gemma-2-9b-it-Fused_PPI')
 
     args = parser.parse_args()
 
