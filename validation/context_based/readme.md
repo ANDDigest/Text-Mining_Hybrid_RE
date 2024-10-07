@@ -4,12 +4,11 @@ The TSV files provided in this repository contain data used to evaluate the accu
 
 ### Column Breakdown
 
-1. **Node IDs and Co-occurrence Value**:
-   - **Format**: `<NodeID1> <NodeID2> <Co-occurrence Value>`
+1. **Node IDs**:
+   - **Format**: `<NodeID1> <NodeID2>
    - **Description**:
      - `NodeID1`: The unique identifier for the first protein, as defined in the ANDSystem/ANDDigest databases.
      - `NodeID2`: The unique identifier for the second protein, also from the ANDSystem/ANDDigest databases.
-     - `Co-occurrence Value`: A numerical value representing the co-occurrence of the two proteins, calculated as \(1 - p\text{-value}\) from the ANDDigest database.
 
 2. **Label of the First Protein**:
    - **Description**: The standard name or label of the first protein. In some examples this field can be presented as IntAct ID if the context was derived from the PubMed entries directly specified in the IntAct database as an evidence of an interaction between the pair. 
@@ -32,15 +31,14 @@ The TSV files provided in this repository contain data used to evaluate the accu
 ### Example Entry
 
 ```
-2A2861717 2A2459001 0.9999999209729    Vpu    CD4    [INST]Context: [PMID: 1727486 Human immunodeficiency virus type 1 Vpu protein regulates the formation of intracellular gp160-CD4 complexes...] Question: Based on the provided context, do the terms [Vpu protein] and [CD4 protein] interact with each other? NOTE: Always begin your response with 'YES' or 'NO'...[/INST]    YES, high confidence; Explanation: The context indicates that the Vpu protein and CD4 protein interact with each other...
+2A2861717 2A2459001    Vpu    CD4    [INST]Context: [PMID: 1727486 Human immunodeficiency virus type 1 Vpu protein regulates the formation of intracellular gp160-CD4 complexes...] Question: Based on the provided context, do the terms [Vpu protein] and [CD4 protein] interact with each other? NOTE: Always begin your response with 'YES' or 'NO'...[/INST]    YES, high confidence; Explanation: The context indicates that the Vpu protein and CD4 protein interact with each other...
 ```
 
 #### Explanation of the Example
 
-- **Node IDs and Co-occurrence Value**:
+- **Node IDs**:
   - `2A2861717`: ANDSystem ID for the first protein (Vpu).
   - `2A2459001`: ANDSystem ID for the second protein (CD4).
-  - `0.9999999209729`: High co-occurrence value indicating a significant association between the two proteins.
 
 - **Label of the First Protein**:
   - `Vpu`: The name of the first protein.
@@ -56,28 +54,16 @@ The TSV files provided in this repository contain data used to evaluate the accu
   - `YES, high confidence; Explanation: The context indicates that the Vpu protein and CD4 protein interact with each other...`
   - The LLM confirms the interaction with high confidence and provides an explanation based on the provided context.
 
-### Notes
-
-- **ANDSystem IDs**: Unique identifiers used within the ANDSystem database to reference specific proteins.
-
-- **Co-occurrence Value**: Calculated as \(1 - p\text{-value}\) from the ANDDigest database, this value quantifies the statistical significance of the proteins being mentioned together in scientific literature.
-
-- **Prompt Structure**:
-  - **Context**: Offers necessary background information for the LLM to make an informed prediction.
-  - **Question and Instructions**: Standardized format to ensure consistent LLM responses, including examples of interacting and non-interacting protein pairs.
-
-- **LLM Predictions**: Designed to mimic human expert analysis by providing a clear answer, confidence level, and rationale.
-
 ### Usage
 
 The set with positive examples was split into the two parts and archived, since the requirements to the uploding files size via the GitHub web-interface. In our study both parts were used for the assessement. The provided files can be reprocessed by the `../../st6.LLM_eval.py`, according to the Usage section on the main page of this repository.
 
 ### Additional Information
 
-- **Fine-tuned LLM**: The language model has been specifically trained by us to interpret scientific texts and predict protein interactions based on contextual information. Is available via the HuggingFace repo ```Timofey/Gemma-2-9b-it-Fused_PPI```.
+- **Fine-tuned LLM**: The language model has been specifically trained by us to interpret scientific texts and predict protein interactions based on contextual information. Is available via the HuggingFace repo `Timofey/Gemma-2-9b-it-Fused_PPI`.
 
 - **Data Sources**:
-  - **ANDSystem/ANDDigest Databases**: Provides the protein IDs and co-occurrence statistics.
+  - **ANDSystem/ANDDigest Databases**: Provides the protein IDs and context of documents.
   - **IntAct Database** (accessed 2024-07-11): Offers curated interaction data and is used for validating the existing interactions. [Used query](https://www.ebi.ac.uk/intact/search?query=species:9606&interactorTypesFilter=protein&interactionTypesFil-ter=physical%20association,direct%20interaction&interactionHostOrganismsFilter=Homo%20sapiens)
   - **Stelzl2005 Dataset**: Offers curated interaction data and is used for validating the non-interactiong pairs. [link](http://www.russelllab.org/negatives/)
   - **PubMed Articles**: Source of the contextual information used in the prompts.
