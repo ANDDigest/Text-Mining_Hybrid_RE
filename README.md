@@ -95,7 +95,7 @@ Parameters:
 
 **4. Fine-tune the Large Language Model:**
 
-  <i> 4.1. Fine-tune the model using mlx_lm:</i>
+   <i>4.1. Fine-tune the model using mlx_lm:</i>
    
    ```bash
    mlx_lm.lora --model <base_model_path> --train --data <training_dataset_path> --lora-layers -1 --iters 50000 --val-batches 1 --learning-rate 2.5e-5 --steps-per-report 250 --steps-per-eval 1000 --test --test-batches 1 --adapter-path <path_where_the_trained_LoRA_adapter_will_be_saved> --save-every 5000  --batch-size 1
@@ -112,8 +112,8 @@ Parameters:
    ```
 
    Parameters:
-   - `--model`: Path to the base pre-trained LLM (same as in step 3.1)
-   - `--adapter-file`: Path to the LoRA adapter obtained from step 3.1
+   - `--model`: Path to the base pre-trained LLM (same as in `step 3.1`)
+   - `--adapter-file`: Path to the LoRA adapter obtained from `step 3.1`
    - `--save-path`: Path to save the fused model (The Fused LLM, used in our study, is available at huggingface [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI))
 
 ## Usage
