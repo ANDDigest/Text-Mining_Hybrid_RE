@@ -86,5 +86,3 @@ The results obtained in our study can be replicated using the provided data file
   - **IntAct Database** (accessed 07-11-2023): Offers curated interaction data and is used for validating the interactions on positive examples. [Used query](https://www.ebi.ac.uk/intact/search?query=species:9606&interactorTypesFilter=protein&interactionTypesFilter=physical%20association,direct%20interaction&interactionHostOrganismsFilter=Homo%20sapiens)
   - **Stelzl2005 Dataset** (accessed 04-10-2023): Offers curated data for human protein pairs shown in experiments as non-interacting, and is used for validating the interactions on negative (non-interacting) examples. [Link](http://www.russelllab.org/negatives/)
   - **PubMed Articles**: Source of the contextual information used in the prompts.
-
-- **Ethical Considerations**: All data used complies with relevant data usage policies and respects intellectual property rights.
