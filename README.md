@@ -152,7 +152,7 @@ Parameters:
 ## Validation Datasets
 
 > [!NOTE]
-> Detailed description of input formats of data for our graph-based binary classifier and LLM model, are available inside the corresponding parts of the `./validation/` folder
+> Detailed description of input formats of data for our graph-based binary classifier (`to be added 08.10.2024`) and LLM model, are available inside the corresponding parts of the `./validation/` folder
 
 ## Data
 
