@@ -103,7 +103,7 @@ Parameters:
 
    Parameters:
    - `--model`: Path to the base pre-trained LLM for fine-tuning (in our study, [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it) was used)
-   - `--data`: Path to the dataset for using in the fine-tuning process (available at huggingface [`Timofey/protein_interactions_LLM_FT_dataset`](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
+   - `--data`: Path to the dataset for using in the fine-tuning process (available at huggingface [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset))
 
    <i>4.2. Fuse the adapter with the base model:</i>
    
