@@ -142,7 +142,7 @@ python st6.LLM_eval.py  \
 ```
 
 Parameters:
-- `--input_tsv_file`: [to be added]
+- `--input_tsv_file`: path to the TSV file, containing the list of prompts (default: )
 - `--output_tsv_file`: [to be added]
 - `--model_name`: [to be added]
 
@@ -152,7 +152,7 @@ Parameters:
 ## Validation Datasets
 
 > [!IMPORTANT]
-> Detailed description of input formats of data, used by each model, are available inside the `./validation/` folder
+> Detailed description of input formats of data for our binary classification and LLM models, are available inside the corresponding parts of the `./validation/` folder
 > [to be added 07.10.2024]
 
 ## Data
