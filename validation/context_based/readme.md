@@ -1,6 +1,6 @@
 ## Files Format Description
 
-The TSV files provided in this repository contain data used to evaluate the accuracy of our software pipeline for predicting protein–protein interactions, the data in the first four columns was used as an input for our fine-tuned Large Language Model (LLM), after the filtering of the pairs, predicted by our graph-based classification model as non-interacting. Each row in the TSV file represents a pair of proteins along with contextual information, the last row contains predictions made by our fine-tuned LLM.
+The TSV files provided in this repository contain data used to evaluate the accuracy of our software pipeline for predicting protein–protein interactions (see Subsection `2.5.` of our manuscript), the data in the first four columns was used as an input for our fine-tuned Large Language Model (LLM), after the filtering of the pairs, predicted by our graph-based classification model as non-interacting. Each row in the TSV file represents a pair of proteins along with contextual information, the last row contains predictions made by our fine-tuned LLM.
 
 ### Column Breakdown
 
