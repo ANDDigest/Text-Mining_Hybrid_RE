@@ -158,7 +158,7 @@ Parameters:
 
 - ANDSystem graph, node embeddings and MLP full training dataset: Available upon request (examples in `./graph_model/` and `./MLP_classifier/dataset/` folders)
 - Graph-based MLP binary classification model, used in our study: Available in `./MLP_classifier/` folder
-- ANDDigest database: https://anddigest.sysbio.ru/
+- ANDDigest database: [link](https://anddigest.sysbio.ru/)
 - LLM, used in our study as a base model for fine-tuning: [google/Gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it)
 - Our fine-tuning dataset: [Timofey/protein_interactions_LLM_FT_dataset](https://huggingface.co/datasets/Timofey/protein_interactions_LLM_FT_dataset)
 - Our fine-tuned and fused LLM: [Timofey/Gemma-2-9b-it-Fused_PPI](https://huggingface.co/Timofey/Gemma-2-9b-it-Fused_PPI)
