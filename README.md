@@ -182,7 +182,7 @@ This project is licensed under the [MIT License].
 
 ## Acknowledgments
 
-This study was funded by the Analytical Center for the Government of the Russian Federation: 70-2023-001318
+This work was supported by a grant for research centers, provided by the Analytical Center for the Government of the Russian Federation in accordance with the subsidy agreement (agreement identifier 000000D730324P540002) and the agreement with the Novosibirsk State University dated December 27, 2023 No. 70-2023-001318.
 
 ## Contact
 
