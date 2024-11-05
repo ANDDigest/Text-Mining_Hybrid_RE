@@ -173,7 +173,7 @@ The method achieved an accuracy of `0.772` (Matthews correlation coefficient) wh
 If you use this code or models in your research, please cite our paper:
 
 ```
-Ivanisenko, T.V.; Demenkov, P.S.; Ivanisenko, V.A. An Accurate and Efficient Approach to Knowledge Extraction from Scientific Publica-tions Using Structured Ontology Models, Graph Neural Networks, and Large Language Models. Int. J. Mol. Sci. 2024, 24, x. https://doi.org/10.3390/xxxxx
+Ivanisenko, T.V.; Demenkov, P.S.; Ivanisenko, V.A. An Accurate and Efficient Approach to Knowledge Extraction from Scientific Publica-tions Using Structured Ontology Models, Graph Neural Networks, and Large Language Models. Int. J. Mol. Sci. 2024, 24, 25, 11811. https://doi.org/10.3390/ijms252111811
 ```
 
 ## License
